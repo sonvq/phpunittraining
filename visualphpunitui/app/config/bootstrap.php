@@ -33,7 +33,7 @@ $config = array(
 
     // Whether or not to store the statistics in a database
     // (these statistics will be used to generate graphs)
-    'store_statistics' => true,
+    'store_statistics' => false,
 
     // The database configuration
     'db' => array(
@@ -49,7 +49,7 @@ $config = array(
     ),
 
     // Whether or not to create snapshots of the test results
-    'create_snapshots' => true,
+    'create_snapshots' => false,
 
     // The directory where the test results will be stored
     'snapshot_directory' => "{$root}/app/history/",
