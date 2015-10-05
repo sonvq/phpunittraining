@@ -1,1 +1,3 @@
 https://phpunit.de/presentations.html
+
+https://jtreminio.com/2013/03/unit-testing-tutorial-part-4-mock-objects-stub-methods-dependency-injection/
