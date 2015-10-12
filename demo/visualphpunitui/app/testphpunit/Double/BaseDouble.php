@@ -9,7 +9,7 @@ class BaseDouble {
     }
     
     public function doAnotherThing(){
-        echo 'YOU SHALL NOT PASS';
+        echo 'After this line, function exit will be called';
         $this->callExit();
     }
     
