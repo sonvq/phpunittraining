@@ -1,8 +1,6 @@
 <?php
 
-namespace doublephpunit;
-
-class Salary {
+class BaseSalary {
 
     private $converted;
     private $hour;
@@ -23,7 +21,7 @@ class Salary {
         $result = file_get_contents($url);
         
         $objects = json_decode($result, true);
-        
+        var_dump($objects);
         $this->rates = $objects['rates'][self::DEFAULT_CURRENCY];
 
         return $this->rates;

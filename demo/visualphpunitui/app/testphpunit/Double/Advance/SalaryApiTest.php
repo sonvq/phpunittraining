@@ -4,22 +4,20 @@ namespace doublephpunit;
 
 use \PHPUnit_Framework_TestCase;
 
-class SalaryTest extends PHPUnit_Framework_TestCase {
+class SalaryApiTest extends PHPUnit_Framework_TestCase {
     public function setUp() {     
-        $this->instance = new Salary();
+        $this->instance = new \BaseSalary();
     }
 
     public function tearDown() {
         unset($this->instance);
     }
     
-    
-    public function testGetCurrencyConverter() {
+    public function testGetCurrencyConverterApiWay() {
         $rates = $this->instance->getCurrencyConverter('USD');
-        $expectedRates = 22306;
-        $this->assertEquals($expectedRates, $rates);
+        var_dump($rates);
         return $rates;
-    }      
+    }
     
     public function testCaculateWorkHour() {
         $hours = $this->instance->caculateWorkHour(8, 5);
@@ -29,7 +27,7 @@ class SalaryTest extends PHPUnit_Framework_TestCase {
     }
     
     /**
-     * @depends testGetCurrencyConverter
+     * @depends testGetCurrencyConverterApiWay
      * @depends testCaculateWorkHour
      */
     public function testSalary($rates, $hours) {        
