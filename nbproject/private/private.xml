@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/wamp/www/phpunittraining/phpunit.xml</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/config/bootstrap.php</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/test/Test/BaseDouble.php</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/test/Test/MockObjectTest.php</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/test/Test/StubMethodTest.php</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/test/SkippedTest.php</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/test/Test/BaseballTest.php</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/test/Test/MockMethodTest.php</file>
-            <file>file:/C:/wamp/www/phpunittraining/visualphpunitui/app/config/phpunit.xml</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

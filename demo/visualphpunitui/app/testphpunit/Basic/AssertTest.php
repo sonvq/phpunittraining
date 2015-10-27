@@ -42,4 +42,24 @@ class AssertTest extends PHPUnit_Framework_TestCase
         echo 'assertSame("2204", 2204)';
         $this->assertSame("2204", 2204);
     }
+    
+    public function testAssertArrayHasKeyFail() {
+        echo "assertArrayHasKey('foos', array('foo' => 'bar')";
+        $this->assertArrayHasKey('foos', array('foo' => 'bar'));
+    }
+    
+    public function testAssertArrayHasKeySuccess() {
+        echo "assertArrayHasKey('foo', array('foo' => 'bar'))";
+        $this->assertArrayHasKey('foo', array('foo' => 'bar'));
+    }
+    
+    public function testAssertContainsFail() {
+        echo "testAssertContains('foo', array('foo' => 'bar'))";
+        $this->assertContains('foo', array('foo' => 'bar'));
+    }
+    
+    public function testAssertContainsSuccess() {
+        echo "testAssertContains('bar', array('foo' => 'bar'))";
+        $this->assertContains('bar', array('foo' => 'bar'));
+    }
 }
