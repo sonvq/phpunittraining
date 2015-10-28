@@ -3,6 +3,11 @@
 namespace doublephpunit;
 
 class MockObjectTest extends \PHPUnit_Framework_TestCase {
+    
+//    public function testBaseDouble () {
+//        $baseDouble = new \BaseDouble();
+//        $this->expectOutputString('YOU SHALL NOT PASS', $baseDouble->doAnotherThing());
+//    }
 
     public function testMockObject() {
         // Create a stub for the SomeClass class.
