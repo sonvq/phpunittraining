@@ -10,15 +10,13 @@ class StubMethodTest extends \PHPUnit_Framework_TestCase {
         $baseDouble = $this->getMockBuilder('BaseDouble')
             ->getMock();
 
-        var_dump($baseDouble->doSomething());
-
         // Configure the stub.
-        $baseDouble->method('doSomething')
+        $baseDouble->method('callExit')
             ->willReturn('foo');
 
-        var_dump($baseDouble->doSomething());
+        var_dump($baseDouble->callExit());
 
-        $this->assertEquals('foo', $baseDouble->doSomething());
+        $this->assertEquals('foo', $baseDouble->callExit());
     }
 
     public function testStubMethodOnce() {
@@ -26,10 +24,10 @@ class StubMethodTest extends \PHPUnit_Framework_TestCase {
             ->getMock();
 
         $baseDouble->expects($this->once())
-            ->method('doSomething')
+            ->method('callExit')
             ->will($this->returnValue('foo'));
 
-        $baseDouble->doSomething();
+        var_dump($baseDouble->callExit());
     }
 
     public function testStubMethodExactly() {
@@ -37,26 +35,39 @@ class StubMethodTest extends \PHPUnit_Framework_TestCase {
             ->getMock();
         
         $baseDouble->expects($this->exactly(2))
-            ->method('doSomething')
+            ->method('callExit')
             ->will($this->returnValue('foo'));
         
-        $baseDouble->doSomething();
-        $baseDouble->doSomething();
+        var_dump($baseDouble->callExit());
+        var_dump($baseDouble->callExit());
+    }
+    
+    public function testStubMethodAny() {
+        $baseDouble = $this->getMockBuilder('BaseDouble')
+            ->getMock();
+        
+        $baseDouble->expects($this->any())
+            ->method('callExit')
+            ->will($this->returnValue('foo'));
+        
+        var_dump($baseDouble->callExit());
+        var_dump($baseDouble->callExit());
+        var_dump($baseDouble->callExit());
     }
     
     public function testStubMethodConsecutive() {
         $baseDouble = $this->getMockBuilder('BaseDouble')
             ->getMock();
         
-        $baseDouble->method('doSomething')
+        $baseDouble->method('callExit')
              ->will($this->onConsecutiveCalls(2, 3, 5, 7));
 
         // $stub->doSomething() returns a different value each time
-        var_dump($baseDouble->doSomething());
-        var_dump($baseDouble->doSomething());
-        var_dump($baseDouble->doSomething());
-        var_dump($baseDouble->doSomething());
-        var_dump($baseDouble->doSomething());
+        var_dump($baseDouble->callExit());
+        var_dump($baseDouble->callExit());
+        var_dump($baseDouble->callExit());
+        var_dump($baseDouble->callExit());
+        var_dump($baseDouble->callExit());
     }
 
 }

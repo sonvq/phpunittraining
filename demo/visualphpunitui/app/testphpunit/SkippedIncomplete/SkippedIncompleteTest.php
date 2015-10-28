@@ -9,7 +9,7 @@ class SkippedIncompleteTest extends PHPUnit_Framework_TestCase
     
     public function testSkipped()
     {
-        $extensionName = 'mssql';
+        $extensionName = 'imagick';
         //$extensionName = 'mysql';
         if (! extension_loaded($extensionName)) {
             $this->markTestSkipped("The $extensionName extension is not available.");

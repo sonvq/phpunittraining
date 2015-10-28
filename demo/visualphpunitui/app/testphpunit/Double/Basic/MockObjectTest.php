@@ -6,7 +6,7 @@ class MockObjectTest extends \PHPUnit_Framework_TestCase {
     
 //    public function testBaseDouble () {
 //        $baseDouble = new \BaseDouble();
-//        $this->expectOutputString('YOU SHALL NOT PASS', $baseDouble->doAnotherThing());
+//        $this->expectOutputString('YOU SHALL NOT PASS', $baseDouble->doSomething());
 //    }
 
     public function testMockObject() {
@@ -16,7 +16,7 @@ class MockObjectTest extends \PHPUnit_Framework_TestCase {
         var_dump(get_class_methods($baseDouble));
                 
         var_dump($baseDouble->doSomething());
-        
+        var_dump($baseDouble->callExit());
     }
 
 }

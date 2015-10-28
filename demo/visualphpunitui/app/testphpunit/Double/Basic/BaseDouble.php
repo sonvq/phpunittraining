@@ -1,19 +1,13 @@
 <?php
 
 class BaseDouble {
-
-    public function doSomething()
-    {
-        // Do something.
-        return 'bar';
-    }
     
-    public function doAnotherThing(){
+    public function doSomething(){
         echo 'YOU SHALL NOT PASS';
         $this->callExit();
     }
     
-    protected function callExit()
+    public function callExit()
     {
         exit;
     }
