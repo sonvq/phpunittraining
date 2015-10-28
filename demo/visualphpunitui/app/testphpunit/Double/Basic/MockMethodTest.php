@@ -10,12 +10,11 @@ class MockMethodTest extends \PHPUnit_Framework_TestCase {
             ->getMock();
 
         $baseDouble->expects($this->once())
-            ->method('callExit')
-            ->will($this->returnValue('foo'));
-
+            ->method('callExit');
         
-//        var_dump($baseDouble->doAnotherThing());
-        $this->assertContains("YOU SHALL NOT PASS", $baseDouble->doAnotherThing() );
+        $this->expectOutputString('YOU SHALL NOT PASS');
+        
+        $baseDouble->doAnotherThing();
     }
 
 }
